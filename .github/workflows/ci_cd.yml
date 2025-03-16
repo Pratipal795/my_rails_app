@@ -41,11 +41,11 @@ jobs:
           RAILS_ENV: test
           DATABASE_URL: "postgres://postgres:password@localhost:5432/my_test_db"
         run: |
-          bin/rails db:create
-          bin/rails db:migrate
+          rails db:create
+          rails db:migrate
 
       - name: Run tests
-        run: bin/rails test
+        run: rails test
 
   deploy:
     needs: test
