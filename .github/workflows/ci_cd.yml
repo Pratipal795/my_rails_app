@@ -34,7 +34,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd app
           bundle install
 
       - name: Set up database
