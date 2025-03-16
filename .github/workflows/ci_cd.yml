@@ -41,8 +41,8 @@ jobs:
           RAILS_ENV: test
           DATABASE_URL: "postgres://postgres:password@localhost:5432/my_test_db"
         run: |
-          rails db:create
-          rails db:migrate
+          bundle exec rails db:create
+          bundle exec rails db:migrate
 
       - name: Run tests
         run: rails test
