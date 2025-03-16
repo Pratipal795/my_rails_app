@@ -45,7 +45,7 @@ jobs:
           bundle exec rails db:migrate
 
       - name: Run tests
-        run: rails test
+        run: bundle exec rails test
 
   deploy:
     needs: test
