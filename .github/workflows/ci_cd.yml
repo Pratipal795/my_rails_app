@@ -33,7 +33,9 @@ jobs:
           bundler-cache: true
 
       - name: Install dependencies
-        run: bundle install
+        run: |
+          cd app
+          bundle install
 
       - name: Set up database
         env:
