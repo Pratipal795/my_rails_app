@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+ENV['GEM_HOME'] ||= File.expand_path('../vendor/bundle', __dir__)
+
 
 ruby '3.1.0'
 
