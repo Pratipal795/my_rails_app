@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ENV['GEM_HOME'] ||= File.expand_path('../vendor/bundle', __dir__)
 
 
-ruby '3.1.0'
+ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.6'
@@ -41,6 +41,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano', '~> 3.17'
+  gem 'capistrano-rails', '~> 1.6'  # Adds Rails-specific tasks
+  gem 'capistrano-passenger', '~> 0.2.0' # If using Passenger
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
